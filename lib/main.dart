@@ -9,7 +9,7 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.white,
         body: SafeArea(
             child: Column(
           children: <Widget>[
@@ -20,8 +20,18 @@ class Myapp extends StatelessWidget {
             Text(
               'Shoma',
               style: TextStyle(
-                  fontSize: 40.0,
-                  color: Colors.black,
+                fontFamily: 'ConcertOne',
+                fontSize: 40.0,
+                color: Colors.black,
+              ),
+            ),
+            Text(
+              'FLUTTER DEVELOPER',
+              style: TextStyle(
+                  fontFamily: 'ConcertOne',
+                  color: Colors.grey,
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
                   fontWeight: FontWeight.bold),
             )
           ],
