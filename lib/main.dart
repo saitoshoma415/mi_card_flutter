@@ -12,6 +12,7 @@ class Myapp extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SafeArea(
             child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CircleAvatar(
               radius: 50.0,
@@ -34,50 +35,39 @@ class Myapp extends StatelessWidget {
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold),
             ),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              color: Colors.grey,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.phone,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
-                    '+81 123 456 789',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'ConcertOne',
-                      fontSize: 20.0,
-                    ),
-                  )
-                ],
+            SizedBox(
+              height: 20.0,
+              width: 150.0,
+              child: Divider(
+                color: Colors.black,
               ),
             ),
-            Container(
-              color: Colors.grey,
-              padding: EdgeInsets.all(10.0),
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.email_outlined),
-                  SizedBox(
-                    width: 10.0,
+            Card(
+                color: Colors.grey,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(Icons.phone),
+                  title: Text(
+                    '+81 123 456 789',
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.black,
+                        fontFamily: 'ConcertOne'),
                   ),
-                  Text(
+                )),
+            Card(
+                color: Colors.grey,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(Icons.email_outlined),
+                  title: Text(
                     'shoma@email.com',
                     style: TextStyle(
                         fontSize: 20.0,
                         color: Colors.black,
                         fontFamily: 'ConcertOne'),
-                  )
-                ],
-              ),
-            )
+                  ),
+                ))
           ],
         )),
       ),
